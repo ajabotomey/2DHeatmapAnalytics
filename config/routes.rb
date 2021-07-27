@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get '/', to: redirect('https://en.wikipedia.org/wiki/HTTP_404')
 
   post '/tutoriallevel/upload', to: 'tutorial_level#upload_data'
-  get 'tutoriallevel/download', to: 'tutorial_level#download_data'
+  get '/tutoriallevel/download', to: 'tutorial_level#download_data'
 end
