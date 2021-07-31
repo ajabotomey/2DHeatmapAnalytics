@@ -46,4 +46,12 @@ class TutorialLevelController < LevelController
         # Render the file
     end
 
+    def reset
+        # Reset the entire json file
+        masterFileName = Rails.root.join("public", "level_files", "tutorial_master.json")
+        newJson = {"positions": []}
+        File.write(masterFileName, JSON.pretty_generate(newJson))
+
+        render :json => newJson
+    end
 end

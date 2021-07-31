@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   post '/tutoriallevel/upload', to: 'tutorial_level#upload_data'
   get '/tutoriallevel/download', to: 'tutorial_level#download_data'
+  get 'tutoriallevel/reset', to: 'tutorial_level#reset'
 end
